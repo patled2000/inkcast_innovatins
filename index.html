@@ -1,0 +1,981 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inkcast Innovations | Digital Marketing </title>
+  <meta name="description" content="Inkcast Innovations - Full-service digital marketing agency offering social media, SEO, ads, and branding solutions.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnH1zvU0gXj9Xf4N4+UNyF0u9X0Z7+PqGVi3fYyqJYG6LepzRvSTz5Z5B0Kh3Gh1ZhM1o6AZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+   <link rel="icon" href="image/479498671_601303483063599_3614992175173678194_n.jpg" type="image/png">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+   <meta name="author" content="Inkcast Innovations">
+<meta property="og:title" content="Inkcast Innovations | Digital Marketing Agency">
+<meta property="og:description" content="Creativity meets strategy – Social media, SEO, ads, and branding services.">
+<meta property="og:image" content="URL_TO_SOCIAL_SHARE_IMAGE">
+<meta property="og:url" content="https://yourwebsite.com">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
+
+
+
+
+  <style>
+@media (max-width: 600px) {
+  .client-logo img {
+    max-width: 60px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 90%;
+    margin: 10px 0;
+  }
+}
+.text-box h1 {
+  font-size: 28px;
+}
+.text-box p {
+  font-size: 14px;
+  padding: 10px;
+}
+.hero-btn {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+
+  
+#home {
+  padding-top: 80px; /* height of sticky navbar + some buffer */
+  margin-top: -80px;
+}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      line-height: 1.6;
+      color: #333;
+        width: 100%;
+  overflow-x: hidden;
+  width: 100%;
+max-width: 100%;
+
+    }
+
+     
+     
+    nav {
+      background-color: #000;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+       padding: 10px 24px;
+      height: 70px; /* fixed height */
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
+       max-width: auto;       /* max width set karo */
+  margin: 0 auto;
+
+   border-radius: 20px;  
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 100px; /* full size */
+      width: auto;  /* narrow width */
+      border-radius: 50%;
+    }
+
+    .logo span {
+      font-size: 22px;
+      font-weight: bold;
+      color: yellow;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    
+      
+    
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 26px;
+      height: 3px;
+      background-color: white;
+      border-radius: 3px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #000;
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+      }
+
+      .nav-links.open {
+        max-height: 300px;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }  
+
+ 
+
+/*services*/
+
+
+    .services-section {
+      padding: 80px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .services-section h2 {
+      font-size: 2.8rem;
+      color: #132438;
+      margin-bottom: 10px;
+    }
+
+    .services-section p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 50px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card i {
+      font-size: 40px;
+      color: #ffcc00;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: #132438;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .services-section h2 {
+        font-size: 2rem;
+      }
+
+      .service-card {
+        padding: 30px 20px;
+      }
+    }
+
+
+
+
+ /*about*/ 
+
+ .about_container1 {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.about_row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about_image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about_text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about_text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Responsive: Stack image and text on small screens */
+@media (max-width: 768px) {
+  .about_row {
+    flex-direction: column;
+  }
+
+  .about_image,
+  .about_text {
+    width: 100%;
+  }
+
+  .about_image img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+   /*whay us*/
+
+   
+    .why-section {
+      background-color: #fff;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .why-header h2 {
+      font-size: 32px;
+      color: #132438;
+      border-left: 5px solid #ffcc00;
+      padding-left: 15px;
+      margin-bottom: 30px;
+    }
+
+    .why-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .why-left {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .why-text {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .why-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .point-box {
+      background-color: #132438;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .point-box:hover {
+      transform: translateY(-5px);
+      background-color: #ffcc00;
+      color: #132438;
+    }
+
+    .point-box h4 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .why-right {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .why-right img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      .why-content {
+        flex-direction: column;
+      }
+
+      .why-points {
+        grid-template-columns: 1fr;
+      }
+    }
+
+ 
+  
+   /* clints slider */
+
+   .logo-slider-section {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.logo-slider-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.logo-track {
+  display: flex;
+  width: calc(250px * 18); /* Adjust based on number of logos */
+  animation: scroll 30s linear infinite;
+}
+
+.logo-slide {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo-slide img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 80px;
+}
+
+/* Animation for scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .logo-track {
+    animation: scroll 20s linear infinite;
+  }
+
+  .logo-slide {
+    width: 150px;
+    padding: 0.5rem;
+  }
+
+  .logo-slide img {
+    max-height: 60px;
+  }
+
+  .logo-slider-section h2 {
+    font-size: 1.2rem;
+  }
+}
+
+    
+
+    
+
+    /*social media icon*/
+    .social-icon {
+    font-size: 35px;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .social-icon.facebook {
+    color: #3b5998;
+  }
+
+  .social-icon.instagram {
+    color: #e4405f;
+  }
+
+  .social-icon.linkedin {
+    color: #0077b5;
+  }
+
+  .social-icon.twitter {
+    color: #1da1f2;
+  }
+
+  /* Hover effect */
+  .social-icon:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+  } 
+
+
+  /*chenal*/
+    .scrolling-banner {
+    width: 100%;
+    overflow: hidden;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 18px;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .scroll-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 20s linear infinite;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }    
+
+
+  /* home page*/
+   
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+        }
+  
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 2;
+    }
+
+    .content {
+      position: relative;
+      z-index: 3;
+      height: 100%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+       padding: 0 20px;
+    }
+
+    .content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-shadow: 0 0 15px rgba(0,0,0,0.7);
+      color: #ffcc00;
+    }
+
+    .content p {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      max-width: 700px;
+      font-weight: 500;
+      text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+
+    .btn-primary,
+    .btn-whatsapp {
+      padding: 15px 40px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      text-transform: uppercase;
+      margin: 10px;
+    }
+
+    .btn-primary {
+      background-color: #ffcc00;
+      color: #222;
+      box-shadow: 0 6px 20px rgba(255, 204, 0, 0.5);
+    }
+
+    .btn-primary:hover {
+      background-color: #e6b800;
+      box-shadow: 0 8px 25px rgba(230, 184, 0, 0.7);
+    }
+
+    .btn-whatsapp {
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1ebe5d;
+    }
+
+    /* Mobile View Adjustments */
+    @media (max-width: 768px) {
+      .slider {
+        height: 80vh;
+      }
+
+      .slide {
+        background-size: cover;
+        background-position: center top;
+      }
+
+      .content h1 {
+        font-size: 2rem;
+      }
+
+      .content p {
+        font-size: 1rem;
+      }
+
+      .btn-primary,
+      .btn-whatsapp {
+        font-size: 1rem;
+        padding: 12px 25px;
+        width: auto;
+      }
+    }
+
+
+/*whatsapp icone*/
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    padding: 16px;
+    font-size: 24px;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    width:70px;
+    height: 70px;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #1ebe5d;
+  }
+
+  </style>
+</head>
+<body>
+   
+    <!--hedar-->
+
+    
+  
+  <nav>
+    <div class="logo">
+      <img src="image/yellow.png" alt="Inkcast Logo">
+      
+    </div>
+
+    <ul class="nav-links" id="navLinks" style="font-weight: bold;">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
+
+     <!--home page-->
+   
+    <div class="slider" id="home">
+    <div class="slide active" style="background-image: url('image/Business-Growth-1.jpg');"></div>
+    <div class="slide" style="background-image: url('image/istockphoto-1257268347-170667a.jpg');"></div>
+    <div class="slide" style="background-image: url('image/office-workers-working-together-as-team.jpg');"></div>
+
+    <div class="overlay"></div>
+
+    <div class="content">
+      <h1 style="color: #f6ab1b;">Inkcast Innovations</h1>
+      <p > Inkcast Innovations is where creativity meets strategy, a full-fledged 
+    <strong style="color:#f6ab1b ;"> Digital Marketing Agency</strong>    
+      
+ built to make brands unforgettable.</p>
+    
+      <a class="btn-whatsapp" href="https://wa.me/9243660234" target="_blank" ><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    function showNextSlide() {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 5000);
+  </script>
+
+ 
+
+  <section class="about_section1" id="about">
+  <div class="about_container1">
+    <h2 style="text-align: left; padding: 30px 10px;">About Us</h2>
+
+    <div class="about_row">
+      <div class="about_image">
+        <img src="image/side-view-cropped-unrecognizable-business-people-working-common-desk.jpg" alt="About Image" />
+      </div>
+
+      <div class="about_text">
+        <p>
+          What began as a passion project in 2020 has now evolved into a creative movement that blends art, emotion,
+          and strategy to build unforgettable brand experiences. Initially thriving as a freelance graphic design
+          venture, Inkcast quickly gained trust and admiration from clients across diverse industries — from home
+          bakers to hotels, educational institutes to IT firms.
+        </p>
+        <p>
+          As the demand for meaningful, result-driven design grew, so did we. In March 2024, we expanded our team, our
+          vision, and our services to step into the market as Inkcast Innovations, based in the vibrant heart of
+          Indore.
+        </p>
+        <p>
+          Today, we offer end-to-end digital marketing solutions that include not only stunning graphic design but also
+          social media management, Facebook & Google ads, SEO, print media, and video production. Our team of creative
+          strategists, designers, marketers, and storytellers work together to craft visuals that do more than just
+          look good — they deliver measurable impact.
+        </p>
+      </div>
+    </div>
+  </div>
+</section> 
+<section class="why-section" id="whyus">
+    <div class="why-header">
+      <h2>Why Us</h2>
+    </div>
+
+    <div class="why-content">
+      <!-- LEFT SIDE -->
+      <div class="why-left">
+        <div class="why-text">
+          <p>
+            You want results. We have found that the best way to get them is through up-front research of the market,
+            competitors, target audience, and customer psychographics. Only after we fully understand you and your
+            needs, we recommend a plan of attack.
+          </p>
+          <p>
+            We bring our diverse team of experts from advertising, design, production, public relations, research, and
+            strategic planning to work for your brand. Not only the approach — the results also look great.
+          </p>
+        </div>
+
+        <div class="why-points">
+          <div class="point-box">
+            <h4>Talented &<br>Responsive</h4>
+          </div>
+          <div class="point-box">
+            <h4>05 Years of<br>Experience</h4>
+          </div>
+          <div class="point-box">
+            <h4>Project<br>Management</h4>
+          </div>
+          <div class="point-box">
+            <h4>Competitive<br>Price</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE IMAGE -->
+      <div class="why-right">
+        <img src="image/question-mark-icon-solving-problem-solution-concept.jpg" alt="Client with Team" />
+      </div>
+    </div>
+  </section>
+  
+
+<!--Services-->  
+<section class="services-section" id="services">
+  <h2>Our Services</h2>
+  <hr>
+  
+
+  <div class="services-grid">
+    <div class="service-card">
+      <i class="fas fa-share-alt"></i>
+      <h3>Social Media Management</h3>
+      <p>Strategic content planning, storytelling, creative design, and community engagement across platforms like Instagram, Facebook, LinkedIn & more.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-bullseye"></i>
+      <h3>Facebook & Google Ads</h3>
+      <p>Performance-driven ad campaigns focused on generating leads, conversions, and brand visibility through targeted advertising.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-search"></i>
+      <h3>SEO</h3>
+      <p>On-page, off-page, and technical SEO practices that boost your Google rankings and drive organic traffic to your website.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-print"></i>
+      <h3>Print Media Designing</h3>
+      <p>Stunning brochures, flyers, posters, packaging, and other print collateral that reinforce your brand’s identity offline.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-video"></i>
+      <h3>Video Ads Production</h3>
+      <p>Short-form and long-form video ads designed for high engagement on platforms like YouTube, Instagram Reels, and more.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-id-badge"></i>
+      <h3>Brand Identity</h3>
+      <p>Unique brand identities including logos, color palettes, typography, and brand guidelines tailored for strong market positioning.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-globe"></i>
+      <h3>Website Development</h3>
+      <p>Visually appealing, user-friendly, and responsive websites that convert visitors into customers.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-mouse-pointer"></i>
+      <h3>UI/UX Design</h3>
+      <p>Intuitive and interactive user interface experiences for web and app platforms that enhance customer engagement.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-pen-nib"></i>
+      <h3>Copywriting</h3>
+      <p>Powerful storytelling, captions, and ad copies that speak your brand’s language and connect emotionally with your audience.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-bolt"></i>
+      <h3>Cold Marketing Design</h3>
+      <p>Scroll-stopping creatives for campaigns that generate responses, leads, and stronger customer relationships.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-gift"></i>
+      <h3>Event/Festival Campaigns</h3>
+      <p>Creative campaigns for Diwali, Holi, product launches, sales promotions, and more to boost engagement and conversions.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-box-open"></i>
+      <h3>Packaging Design</h3>
+      <p>Smart, attractive, and functional packaging that enhances product shelf appeal and communicates your brand instantly.</p>
+    </div>
+  </div>
+</section>
+
+
+  
+   <section class="logo-slider-section">
+    <h2>Our Trusted Clients</h2>
+    <div class="slider-container">
+      <div class="logo-track">
+        <!-- Logos (Repeat for smooth scroll loop) -->
+        <div class="logo-slide"><img src="client_image/Layer 11.png" alt="Nike" /></div>
+        <div class="logo-slide"><img src="client_image/Layer 10.png" alt="Nike" /></div>
+        <div class="logo-slide"><img src="client_image/Layer 9.png" alt="Nike" /></div>
+        <div class="logo-slide"><img src="client_image/Layer 8.png" alt="Nike" /></div>
+        <div class="logo-slide"><img src="client_image/Layer 7.png" alt="Nike" /></div>
+        <div class="logo-slide"><img src="client_image/Layer 6.png" alt="Nike" /></div>
+        <div class="logo-slide"><img src="client_image/Layer 4.png" alt="Nike" /></div>
+        <div class="logo-slide"><img src="client_image/Layer 3.png" alt="Nike" /></div>
+        <div class="logo-slide"><img src="client_image/Layer 2.png" alt="Nike" /></div>
+        <!-- Repeat for infinite effect -->
+          <div class="logo-slide"><img src="client_image/Layer 11.png" alt="Nike" /></div>
+        <div class="logo-slide"><img src="client_image/Layer 10.png" alt="Nike" /></div>
+        <div class="logo-slide"><img src="client_image/Layer 9.png" alt="Nike" /></div>
+        <div class="logo-slide"><img src="client_image/Layer 8.png" alt="Nike" /></div>
+        <div class="logo-slide"><img src="client_image/Layer 7.png" alt="Nike" /></div>
+        <div class="logo-slide"><img src="client_image/Layer 6.png" alt="Nike" /></div>
+        <div class="logo-slide"><img src="client_image/Layer 4.png" alt="Nike" /></div>
+        <div class="logo-slide"><img src="client_image/Layer 3.png" alt="Nike" /></div>
+        <div class="logo-slide"><img src="client_image/Layer 2.png" alt="Nike" /></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="scrolling-banner">
+  <div class="scroll-text">
+    Inkcast Innovations — Creative Solutions for the Digital World ✨ Inkcast Innovations — Creative Solutions for the Digital World ✨
+  </div>
+</div>
+  <footer>
+  <div class="footer-content" id="contact" style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 40px; background-color: #222; color: white;">
+    
+    <div class="footer-logo" style="flex: 1;">
+      <img src="image/yellow.png" alt="Inkcast Innovations" style="max-width: 270px;" />
+    </div>
+
+    <div class="footer-contact" style="flex: 2; padding-left: 20px;">
+      <h3 style="font-size: 24px; margin-bottom: 15px;">Contacts</h3>
+      <p style="font-size: 16px; ">President Tower, Office Number 314,<br> Chhoti Gwaltoli, Indore 452001 (m.p.)</p>
+      <p style="font-size: 16px; ">Email: grow@inkcast.in</p>
+      <p style="font-size: 16px; ">Phone: +91-9243660234</p>
+      </div>
+ 
+<div class="footer-social" style="margin-top: 15px;">
+  <a href="https://www.facebook.com/inkkcast" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/inkcast/" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.linkedin.com/company/inkcast/posts/?feedView=all" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+
+</div>
+
+  </div>
+
+  <div class="footer-bottom" style="text-align: center; padding: 15px; background-color: #111; color: #aaa;">
+    <p>&copy; 2025 Inkcast Innovations. All rights reserved.</p>
+  </div>
+</footer>
+   <!--whatsapp -->
+
+
+ <!-- Font Awesome for icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/9243660234" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+      
+ 
+
+
+</body>
+</html>
