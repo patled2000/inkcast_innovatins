@@ -59,11 +59,11 @@
 }
 
 
-  
 #home {
   padding-top: 80px; /* height of sticky navbar + some buffer */
   margin-top: -80px;
 }
+
 
     * {
       margin: 0;
@@ -671,6 +671,77 @@ max-width: 100%;
     background-color: #1ebe5d;
   }
 
+
+    /*Logo Popup Modal */
+  /* Logo Modal Container */
+ .logo-modal {
+  position: fixed;
+  top: 50%;
+  left: -100%; /* Start off-screen */
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: slideInOutLogo 4s ease-in-out forwards;
+  pointer-events: none;
+  background-color: #222;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 20px; /* spacing for smaller screens */
+  box-sizing: border-box;
+}
+
+.logo-img {
+  width: 60vw;        /* Scales with screen size */
+  max-width: 280px;   /* Prevents too large on desktop */
+  height: auto;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.logo-text {
+  margin-top: 10px;
+  font-size: 4vh;       /* Scales with screen size */
+  color: white;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  text-align: center;
+}
+
+/* Slide in from left, hold, slide out to right */
+@keyframes slideInOutLogo {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  20% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  80% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 480px) {
+  .logo-modal {
+    animation-duration: 3s;
+  }
+}
+
+
   </style>
 </head>
 <body>
@@ -687,9 +758,9 @@ max-width: 100%;
 
     <ul class="nav-links" id="navLinks" style="font-weight: bold;">
       <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#about">About Us</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact">Contact Us</a></li>
     </ul>
 
     <div class="hamburger" id="hamburger">
@@ -711,8 +782,8 @@ max-width: 100%;
      <!--home page-->
    
     <div class="slider" id="home">
-    <div class="slide active" style="background-image: url('image/Business-Growth-1.jpg');"></div>
-    <div class="slide" style="background-image: url('image/istockphoto-1257268347-170667a.jpg');"></div>
+    <div class="slide active" style="background-image: url('image/shutterstock_1191697438-1024x703.jpg');"></div>
+    <div class="slide" style="background-image: url('slider img/slider_img/businessmen-shaking-hands-while-another-is-writing.jpg');"></div>
     <div class="slide" style="background-image: url('image/office-workers-working-together-as-team.jpg');"></div>
 
     <div class="overlay"></div>
@@ -944,8 +1015,8 @@ max-width: 100%;
     </div>
 
     <div class="footer-contact" style="flex: 2; padding-left: 20px;">
-      <h3 style="font-size: 24px; margin-bottom: 15px;">Contacts</h3>
-      <p style="font-size: 16px; ">President Tower, Office Number 314,<br> Chhoti Gwaltoli, Indore 452001 (m.p.)</p>
+      <h3 style="font-size: 24px; margin-bottom: 15px;">Contact Us</h3>
+      <p style="font-size: 16px; ">President Tower, Office Number 314,<br> Chhoti Gwaltoli, Indore 452001 (MP)</p>
       <p style="font-size: 16px; ">Email: grow@inkcast.in</p>
       <p style="font-size: 16px; ">Phone: +91-9243660234</p>
       </div>
@@ -974,8 +1045,21 @@ max-width: 100%;
   <i class="fab fa-whatsapp"></i>
 </a>
       
- 
-
+   <!-- Logo Popup Modal -->
+ <div id="logoModal" class="logo-modal">
+  <img src="image/yellow.png" alt="Company Logo" class="logo-img" />
+  <h2 class="logo-text">Welcome to Inkcast Innovations</h2>
+</div>
+  <script>
+  window.addEventListener('load', () => {
+    const modal = document.getElementById('logoModal');
+    
+    // Show for 5s, then remove from DOM
+    setTimeout(() => {
+      modal.style.display = 'none';
+    }, 3000); // Match animation duration
+  });
+</script>
 
 </body>
 </html>
