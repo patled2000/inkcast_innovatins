@@ -30,6 +30,102 @@
 
 
   <style>
+    @media (max-width: 480px) {
+  .logo img {
+    height: 45px;
+    padding-top: 5px;
+    padding-left: 10px;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .btn-primary,
+  .btn-whatsapp {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .footer-left,
+  .footer-right {
+    padding: 20px;
+  }
+
+  .footer-logo img {
+    height: 60px;
+    margin-left: 0;
+  }
+}
+
+
+
+/* General mobile optimizations */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    padding: 0 10px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.4rem;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .btn-primary,
+  .btn-whatsapp {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about_text h1 {
+    font-size: 36px;
+  }
+
+  .about_image img {
+    height: auto;
+  }
+
+  .footer-left h1,
+  .footer-hash {
+    font-size: 48px;
+  }
+
+  .footer-overlay-text {
+    font-size: 36px;
+    right: 10px;
+  }
+
+  .footer-right {
+    padding: 20px;
+  }
+}
+
+
+
+
 @media (max-width: 600px) {
   .client-logo img {
     max-width: 60px;
@@ -1467,7 +1563,7 @@ nav {
 </a>
  
 
-<!-- 
+
  <div id="logoModal" class="logo-modal">
    <div class="logo-loader-circle"></div>
   <img src="image/ILC_Team_Logo_WhiiteBG_07.png" alt="Company Logo" class="logo-img" />
@@ -1485,7 +1581,6 @@ nav {
   });
 </script>
 
--->
 
 
 
